@@ -33,7 +33,7 @@ ini_set('display_errors', 1);
 
             <label for="confirmarContrasena">Confirmar Contraseña:</label>
             <input type="password" id="confirmarContrasena" name="contrasena" required>
-            <span class="red">* <?php echo $confirmarContrasenaErr;?></span>
+            <span class="error">* <?php echo $confirmarContrasenaErr;?></span>
             <br>
 
             <button type="submit">Registrarse</button>
