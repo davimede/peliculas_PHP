@@ -21,11 +21,6 @@ ini_set('display_errors', 1);
             <span class="error">* <?php echo $nombreErr;?></span>
             <br>
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <span class="error">* <?php echo $emailErr;?></span>
-            <br>
-
             <label for="contrasena">Contraseña:</label>
             <input type="password" id="contrasena" name="contrasena" required>
             <span class="error">* <?php echo $contrasenaErr;?></span>
@@ -40,6 +35,10 @@ ini_set('display_errors', 1);
 
             <p>Hacer login</p>
             <a href="login.php"><button type="submit">Loguearse</button></a>
+
+            <?php 
+            session_unset();
+            ?>
         </form>
     </main>
 </body>
