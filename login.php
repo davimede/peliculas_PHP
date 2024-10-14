@@ -13,9 +13,9 @@ ini_set('display_errors', 1);
 </head>
 <body>
     <main>
-        <h1>Formulario de registro</h1>
+        <h1>Iniciar Sesión</h1>
 
-        <form action="validar_registro.php" method="POST">
+        <form action="validar_login.php" method="POST">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
             <span style="color: red;" class="error"><?php echo isset($_SESSION['nombreErr']) ? $_SESSION['nombreErr'] : ''; ?></span>
@@ -26,17 +26,12 @@ ini_set('display_errors', 1);
             <span style="color: red;" class="error"><?php echo isset($_SESSION['contrasenaErr']) ? $_SESSION['contrasenaErr'] : ''; ?></span>
             <br>
 
-            <label for="confirmarContrasena">Confirmar Contraseña:</label>
-            <input type="password" id="confirmarContrasena" name="confirmarContrasena" required>
-            <span style="color: red;" class="error"><?php echo isset($_SESSION['confirmarContrasenaErr']) ? $_SESSION['confirmarContrasenaErr'] : ''; ?></span>
-            <br>
-
-            <button type="submit">Registrarse</button>
+            <button type="submit">Iniciar Sesión</button>
         </form>
 
-        <p>Hacer login</p>
-            <a href="login.php"><button type="submit">Loguearse</button></a>
-
+        <p>¿No tienes una cuenta?</p>
+            <a href="registro.php"><button>Crear una cuenta</button></a>
+            
         <?php 
             session_unset();
         ?>

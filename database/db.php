@@ -41,9 +41,9 @@ $sql = "CREATE TABLE IF NOT EXISTS peliculasUsuario (
     ISAN VARCHAR(20) NOT NULL,
     nombre_pelicula VARCHAR(100) NOT NULL,
     puntuacion INT CHECK (puntuacion >= 1 AND puntuacion <= 10),
-    anyo INT CHECK (anyo >= 1888 AND anyo <= YEAR(CURDATE())),
+    anyo INT CHECK (anyo >= 1888 AND anyo <= 2024),
     PRIMARY KEY (usuario, ISAN),
-    FOREIGN KEY (usuario) REFERENCES usuarios(nombre)
+    FOREIGN KEY (usuario) REFERENCES usuarios(nombre) ON DELETE CASCADE
 )";
 
 if ($conn->query($sql) === TRUE) {
